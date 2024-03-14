@@ -13,10 +13,8 @@ Plongez au cœur de la Renaissance à Amboise, siège du roi de France, dans ce 
 
 ## Téléchargement
 
-- [Windows][gamedl]
-
-Une fois l'exécutable téléchargé, il suffira de le lancer et le jeu s'éxecutera.
-Malheureusement Linux et MacOS ne sont pas supportés pour le moment.
+Nous n'avons pas eu le temps de faire un exécutable. Il suffira de télécharger le fichier game est lancer le jeux directement depuis 
+l'environement Godot.
 
 ## Documentation
 
