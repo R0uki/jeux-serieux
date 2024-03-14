@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4yua56cru1eu"]
+
+[ext_resource type="Script" path="res://Quests/QuestsManager.gd" id="1_xwyop"]
+[ext_resource type="PackedScene" uid="uid://bl1w730rxnycj" path="res://Quests/Quest.tscn" id="2_vhmy0"]
+
+[node name="QuestsManager" type="Node2D"]
+script = ExtResource("1_xwyop")
+
+[node name="Quest" type="Node2D" parent="."]
+
+[node name="QF01" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF01"
+ressource_obtained = "coins"
+amount_obtained = 1
+amount_give = -4
+
+[node name="QF02" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF02"
+ressource_obtained = "resource_2"
+amount_obtained = 1
+ressource_give = "coins"
+amount_give = -1

@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://csdi6t8cip5uo"]
+
+[ext_resource type="Script" path="res://scene/UserUi/DeathPopup.gd" id="1_7cfq2"]
+[ext_resource type="Texture2D" uid="uid://goho3edypt8b" path="res://ImportFile/parchment1.png" id="1_ydrdb"]
+[ext_resource type="Texture2D" uid="uid://c37b0qe4y2ddm" path="res://ImportFile/ui/Popup/coffin.jpg" id="3_cy0kh"]
+[ext_resource type="AudioStream" uid="uid://bysinp2t1fpbp" path="res://ImportFile/Sounds/Music/death.wav" id="4_88v34"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mupx0"]
+font_size = 32
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="DeathPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7cfq2")
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ydrdb")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="Main"]
+layout_mode = 1
+anchor_left = 0.348158
+anchor_top = 0.157385
+anchor_right = 0.649105
+anchor_bottom = 0.745923
+offset_left = 0.25
+offset_top = 0.159996
+offset_right = 0.349976
+offset_bottom = 0.119995
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="Main/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cy0kh")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="Main/Control"]
+layout_mode = 0
+offset_left = -240.0
+offset_top = 23.9998
+offset_right = -132.0
+offset_bottom = 54.9998
+scale = Vector2(1.60454, 1.60454)
+text = "Retour au Menu"
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = 131.0
+offset_right = 166.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Vous ne le savez pas encore,
+Mais vous êtes déja mort
+"
+label_settings = SubResource("LabelSettings_mupx0")
+horizontal_alignment = 1
+
+[node name="MainPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_88v34")
+volume_db = -20.0
+
+[connection signal="pressed" from="Main/Control/Button" to="." method="_on_button_pressed"]

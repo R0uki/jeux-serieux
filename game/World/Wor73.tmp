@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://rty53g6e17wa"]
+
+[ext_resource type="PackedScene" uid="uid://ctf83grvrkwi8" path="res://scene/Levels/Amboise.tscn" id="1_rcf1s"]
+[ext_resource type="PackedScene" uid="uid://bvf1e7r085x6g" path="res://scene/Menu/PauseMenu.tscn" id="1_sutk4"]
+[ext_resource type="PackedScene" uid="uid://bn5kyck1dtoq7" path="res://scene/Characteres/Player/Player.tscn" id="2_2lmla"]
+
+[node name="World" type="Node2D"]
+position = Vector2(-283, -573)
+
+[node name="UI" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("1_sutk4")]
+visible = false
+
+[node name="Niveaux" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Amboise" parent="Niveaux" instance=ExtResource("1_rcf1s")]
+position = Vector2(253.688, 603.12)
+
+[node name="Player" parent="Niveaux" instance=ExtResource("2_2lmla")]
+unique_name_in_owner = true
+position = Vector2(-796, 1499)
+scale = Vector2(0.7, 0.7)
+
+[node name="AnimatedSprite2D" parent="Niveaux/Player" index="0"]
+animation = &"MoveDown"
+
+[editable path="Niveaux/Player"]

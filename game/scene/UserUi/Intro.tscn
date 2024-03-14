@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuttxcntvpvds"]
+
+[ext_resource type="Texture2D" uid="uid://goho3edypt8b" path="res://ImportFile/parchment1.png" id="1_du5l4"]
+[ext_resource type="Script" path="res://scene/UserUi/Intro.gd" id="1_nfu1f"]
+[ext_resource type="Texture2D" uid="uid://c1no3r2k13c31" path="res://ImportFile/Ui/Popup/Zieu_pix.png" id="2_c82mn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pc6eg"]
+font_size = 32
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nfu1f")
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_du5l4")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="Main"]
+layout_mode = 1
+anchor_left = 0.348158
+anchor_top = 0.157385
+anchor_right = 0.649105
+anchor_bottom = 0.745923
+offset_left = 0.25
+offset_top = 0.159996
+offset_right = 0.349976
+offset_bottom = 0.119995
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="Main/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -73.0001
+offset_top = -17.0002
+offset_right = 57.0002
+offset_bottom = 2.00006
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_c82mn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = 120.0
+offset_right = 228.5
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "\"Seul celui qui est noble sera
+à la droite de Dieu\""
+label_settings = SubResource("LabelSettings_pc6eg")
+horizontal_alignment = 1

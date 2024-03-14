@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2tp300hykngp"]
+
+[ext_resource type="Script" path="res://scene/UserUi/EndScreen.gd" id="1_kx1vm"]
+[ext_resource type="Texture2D" uid="uid://goho3edypt8b" path="res://ImportFile/parchment1.png" id="1_qw4ks"]
+[ext_resource type="Texture2D" uid="uid://daux5cf8iana7" path="res://ImportFile/Items/tableau_roi.png" id="2_jivfq"]
+[ext_resource type="AudioStream" uid="uid://dlthjx4hh8t6r" path="res://ImportFile/Sounds/Music/menu_theme.wav" id="4_jsjn4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c57k8"]
+font_size = 32
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kx1vm")
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qw4ks")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="Main"]
+layout_mode = 1
+anchor_left = 0.348158
+anchor_top = 0.157385
+anchor_right = 0.649105
+anchor_bottom = 0.745923
+offset_left = 0.25
+offset_top = 0.159996
+offset_right = 0.349976
+offset_bottom = 0.119995
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="Main/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jivfq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="Main/Control"]
+layout_mode = 0
+offset_left = 41.9999
+offset_top = 343.0
+offset_right = 150.0
+offset_bottom = 374.0
+scale = Vector2(1.60454, 1.60454)
+text = "Retour au Menu"
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = 120.0
+offset_right = 228.5
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Vous avez rejoin les rangs du seigneur
+"
+label_settings = SubResource("LabelSettings_c57k8")
+horizontal_alignment = 1
+
+[node name="MainPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jsjn4")
+volume_db = -20.0
+
+[connection signal="pressed" from="Main/Control/Button" to="." method="_on_button_pressed"]

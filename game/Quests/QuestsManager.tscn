@@ -1,0 +1,246 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4yua56cru1eu"]
+
+[ext_resource type="Script" path="res://Quests/QuestsManager.gd" id="1_xwyop"]
+[ext_resource type="PackedScene" uid="uid://bl1w730rxnycj" path="res://Quests/Quest.tscn" id="2_vhmy0"]
+
+[node name="QuestsManager" type="Node2D"]
+script = ExtResource("1_xwyop")
+
+[node name="Quest" type="Node2D" parent="."]
+
+[node name="QS01" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QS01"
+ressource_obtained = "quest_item"
+amount_obtained = 1
+ressource_give = "quest_item"
+quest_items = "defined_quest"
+
+[node name="QS02" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QS02"
+ressource_obtained = "coins"
+amount_obtained = 5
+ressource_give = "quest_item"
+amount_give = -1
+quest_items = "defined_quest"
+
+[node name="QF01_tuto_exchange_piece" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF01"
+ressource_obtained = "coins"
+amount_obtained = 2
+amount_give = -3
+
+[node name="QF02_tuto_exchange_ressource" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF02"
+ressource_obtained = "resource_2"
+amount_obtained = 2
+amount_give = -1
+
+[node name="QF03_tuto_arnaque" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF03"
+ressource_obtained = "coins"
+amount_obtained = 1
+amount_give = -10
+
+[node name="QF04_enought_ble" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF04"
+ressource_obtained = "coins"
+amount_obtained = 2
+amount_give = -5
+
+[node name="QF05_need_ble" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF05"
+ressource_obtained = "coins"
+amount_obtained = 4
+amount_give = -6
+
+[node name="QF06_need_oublon_biere" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF06"
+ressource_obtained = "resource_3"
+amount_obtained = 2
+ressource_give = "coins"
+amount_give = -3
+
+[node name="QF07_sell_ble" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF07"
+ressource_obtained = "coins"
+amount_obtained = 3
+amount_give = -6
+
+[node name="QF08_sell_oublon" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF08"
+ressource_obtained = "resource_3"
+amount_obtained = 5
+ressource_give = "coins"
+amount_give = -3
+
+[node name="QF09_exchange_orge" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF09"
+ressource_obtained = "resource_2"
+amount_obtained = 1
+ressource_give = "resource_3"
+amount_give = -1
+
+[node name="QF10_very_need_oublon" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF10"
+ressource_obtained = "coins"
+amount_obtained = 5
+ressource_give = "resource_3"
+amount_give = -2
+
+[node name="QF11_seel_blehors" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF11"
+ressource_obtained = "coins"
+amount_obtained = 3
+amount_give = -4
+
+[node name="QF12_exchange_oublon" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF12"
+amount_obtained = 4
+ressource_give = "resource_3"
+amount_give = -1
+
+[node name="QF13_sell_orge" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF13"
+ressource_obtained = "coins"
+amount_obtained = 4
+ressource_give = "resource_2"
+amount_give = -3
+
+[node name="QF14_buy_orge" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF14"
+ressource_obtained = "resource_2"
+amount_obtained = 5
+ressource_give = "coins"
+amount_give = -2
+
+[node name="QF15_buy_ble" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF15"
+ressource_obtained = "coins"
+amount_obtained = 1
+amount_give = -5
+
+[node name="QF16_exchange_oublons" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF16"
+amount_obtained = 5
+ressource_give = "resource_3"
+amount_give = -1
+
+[node name="QF17_need_ble" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF17"
+ressource_obtained = "coins"
+amount_obtained = 2
+amount_give = -3
+
+[node name="QN01" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QN01"
+ressource_obtained = "coins"
+amount_obtained = 100
+ressource_give = "resource_2"
+amount_give = -9
+
+[node name="QN02" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QN02"
+ressource_obtained = "coins"
+amount_obtained = 150
+amount_give = -40
+
+[node name="QN03" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QN03"
+ressource_obtained = "quest_item"
+amount_obtained = 1
+ressource_give = "quest_item"
+quest_items = "tableau_noble"
+
+[node name="QN04" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QN04"
+ressource_obtained = "coins"
+amount_obtained = 400
+ressource_give = "quest_item"
+amount_give = -1
+quest_items = "tableau_noble"
+
+[node name="QM01" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM01"
+ressource_obtained = "coins"
+amount_obtained = 15
+amount_give = -20
+
+[node name="QM02" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM02"
+ressource_obtained = "coins"
+amount_obtained = 15
+ressource_give = "resource_2"
+amount_give = -7
+
+[node name="QM03" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM03"
+ressource_obtained = "coins"
+amount_obtained = 20
+ressource_give = "resource_3"
+amount_give = -8
+
+[node name="QM04" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM04"
+ressource_obtained = "coins"
+amount_obtained = 40
+ressource_give = "resource_2"
+amount_give = -20
+
+[node name="QM05" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM05"
+ressource_obtained = "resource_2"
+amount_obtained = 15
+amount_give = -10
+
+[node name="QM06" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM06"
+ressource_obtained = "coins"
+amount_obtained = 20
+ressource_give = "resource_3"
+amount_give = -5
+
+[node name="QM07" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM07"
+ressource_obtained = "coins"
+amount_obtained = 20
+ressource_give = "resource_2"
+amount_give = -15
+
+[node name="QM08" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM08"
+ressource_obtained = "resource_3"
+amount_obtained = 10
+ressource_give = "coins"
+amount_give = -20
+
+[node name="QM09" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM09"
+ressource_obtained = "coins"
+amount_obtained = 50
+ressource_give = "resource_3"
+amount_give = -15
+
+[node name="QM10" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM10"
+ressource_obtained = "resource_3"
+amount_obtained = 5
+ressource_give = "resource_2"
+amount_give = -10
+
+[node name="QM11" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM11"
+ressource_obtained = "resource_2"
+amount_obtained = 10
+amount_give = -15
+
+[node name="QM12" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM12"
+amount_obtained = 10
+ressource_give = "coins"
+amount_give = -6
+
+[node name="QM13" parent="Quest" instance=ExtResource("2_vhmy0")]
+quest_id = "QM13"
+ressource_obtained = "coins"
+amount_obtained = 15
+amount_give = -10

@@ -1,0 +1,518 @@
+[gd_scene load_steps=25 format=3 uid="uid://4uc56c6kxxxw"]
+
+[ext_resource type="Script" path="res://scene/UserUi/MainUi.gd" id="1_kexkx"]
+[ext_resource type="Texture2D" uid="uid://b3bs6wxhgpnor" path="res://ImportFile/ui/components/CharacterSheet.png" id="2_lwnaq"]
+[ext_resource type="Texture2D" uid="uid://dvywoa3gtur6w" path="res://ImportFile/ui/characters/serf.png" id="3_ui0hi"]
+[ext_resource type="Texture2D" uid="uid://daasw3t856ao4" path="res://ImportFile/ui/characters/Rank/Paysan.png" id="4_5oc42"]
+[ext_resource type="Texture2D" uid="uid://y8kbtctj2prj" path="res://ImportFile/ui/components/CoinBackground.png" id="5_44tir"]
+[ext_resource type="Texture2D" uid="uid://dmonf50qxp87k" path="res://ImportFile/items/coins/copper.png" id="6_w6l5q"]
+[ext_resource type="Texture2D" uid="uid://ddxuh2p4fixjc" path="res://ImportFile/ui/components/InventorySheet.png" id="7_g12ya"]
+[ext_resource type="Texture2D" uid="uid://dbpsrnppbwc70" path="res://ImportFile/ui/components/BoxItem.png" id="8_psfrr"]
+[ext_resource type="Texture2D" uid="uid://bobka5lfmbk28" path="res://ImportFile/items/resources/wheat.png" id="9_4w85f"]
+[ext_resource type="Texture2D" uid="uid://m3hd26xpfnbi" path="res://ImportFile/ui/actionBar/jauge.png" id="9_28ge7"]
+[ext_resource type="Texture2D" uid="uid://dneoiayejr0ox" path="res://ImportFile/items/resources/barley.png" id="10_e8p1a"]
+[ext_resource type="Texture2D" uid="uid://dga6eayn88pdp" path="res://ImportFile/ui/components/BoxQuestItem.png" id="10_hvjsf"]
+[ext_resource type="Texture2D" uid="uid://dit2eqqgbamni" path="res://ImportFile/ui/actionBar/jauge_surface.png" id="10_yvwwj"]
+[ext_resource type="Texture2D" uid="uid://bs8ldxgxak7cy" path="res://ImportFile/items/resources/hop.png" id="11_6i554"]
+[ext_resource type="Texture2D" uid="uid://bnmg5kq8nir6y" path="res://ImportFile/items/default_quest.png" id="13_hgo53"]
+[ext_resource type="Texture2D" uid="uid://chu0l8dp6r60v" path="res://ImportFile/ui/actionBar/fillable/5.png" id="15_ys45s"]
+[ext_resource type="Texture2D" uid="uid://bpojmq24ihg0q" path="res://ImportFile/ui/actionBar/fillable/2.png" id="16_wg07t"]
+[ext_resource type="Texture2D" uid="uid://d2icoe5f7mktu" path="res://ImportFile/ui/actionBar/fillable/3.png" id="17_nb7ce"]
+[ext_resource type="Texture2D" uid="uid://wn1s2xf8fyy6" path="res://ImportFile/ui/actionBar/fillable/4.png" id="18_t45cg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1e0tk"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2rm7b"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e7qxk"]
+font_size = 32
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_664rr"]
+line_spacing = 10.0
+font_size = 22
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ex64t"]
+frames = 4
+frame_0/texture = ExtResource("15_ys45s")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("16_wg07t")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("17_nb7ce")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("18_t45cg")
+frame_3/duration = 0.1
+
+[node name="MainUi" type="CanvasLayer"]
+script = ExtResource("1_kexkx")
+
+[node name="MainWindow" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -344.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="CharacterSheet" type="Control" parent="MainWindow"]
+layout_mode = 1
+anchor_right = 0.272632
+anchor_bottom = 0.647727
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CharacterSheetTexture" type="TextureRect" parent="MainWindow/CharacterSheet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lwnaq")
+expand_mode = 1
+
+[node name="CharacterIcon" type="Control" parent="MainWindow/CharacterSheet"]
+layout_mode = 1
+anchor_left = 0.078058
+anchor_top = 0.166368
+anchor_right = 0.313027
+anchor_bottom = 0.815614
+offset_left = -2.21706
+offset_top = 0.034008
+offset_right = -0.0741196
+offset_bottom = 0.0200195
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="MainWindow/CharacterSheet/CharacterIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ui0hi")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CharacterRank" type="Control" parent="MainWindow/CharacterSheet"]
+layout_mode = 1
+anchor_left = 0.637065
+anchor_top = 0.175439
+anchor_right = 0.918478
+anchor_bottom = 0.815912
+offset_right = 0.113934
+offset_bottom = -0.0139847
+metadata/_edit_use_anchors_ = true
+
+[node name="Rank" type="TextureRect" parent="MainWindow/CharacterSheet/CharacterRank"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5oc42")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CharacterLabels" type="Control" parent="MainWindow/CharacterSheet"]
+layout_mode = 1
+anchor_right = 0.154
+anchor_bottom = 0.351
+offset_left = 84.0
+offset_top = 20.0
+offset_right = 84.1139
+offset_bottom = 19.986
+
+[node name="Name" type="Control" parent="MainWindow/CharacterSheet/CharacterLabels"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="MainWindow/CharacterSheet/CharacterLabels/Name"]
+layout_mode = 1
+offset_right = 65.0
+offset_bottom = 26.0
+text = "Jean Louis"
+label_settings = SubResource("LabelSettings_1e0tk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RankName" type="Control" parent="MainWindow/CharacterSheet/CharacterLabels"]
+layout_mode = 1
+anchor_top = 0.625
+anchor_right = 1.0
+anchor_bottom = 1.625
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RankLabel" type="Label" parent="MainWindow/CharacterSheet/CharacterLabels/RankName"]
+layout_mode = 1
+offset_right = 43.0
+offset_bottom = 26.0
+text = "Paysan"
+label_settings = SubResource("LabelSettings_2rm7b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Coin" type="Control" parent="MainWindow"]
+layout_mode = 1
+anchor_left = 0.648389
+anchor_top = 0.199136
+anchor_right = 0.712
+anchor_bottom = 0.54
+offset_left = 0.0300293
+offset_top = -0.0480003
+offset_right = -0.400024
+offset_bottom = -0.0400009
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemBackground" type="TextureRect" parent="MainWindow/Coin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_44tir")
+expand_mode = 1
+
+[node name="ItemIcon" type="Control" parent="MainWindow/Coin"]
+layout_mode = 1
+anchor_left = 0.0833399
+anchor_top = 0.0833343
+anchor_right = 0.916667
+anchor_bottom = 0.916667
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoinIcon" type="TextureRect" parent="MainWindow/Coin/ItemIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_w6l5q")
+expand_mode = 1
+
+[node name="CoinLabel" type="Label" parent="MainWindow/Coin/ItemIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.5
+offset_top = -19.5
+offset_right = 14.5
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "64
+"
+label_settings = SubResource("LabelSettings_e7qxk")
+horizontal_alignment = 1
+
+[node name="Inventory" type="Control" parent="MainWindow"]
+layout_mode = 1
+anchor_left = 0.711579
+anchor_right = 0.999895
+anchor_bottom = 0.545182
+offset_right = 0.0999985
+offset_bottom = 0.0479965
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryBackground" type="TextureRect" parent="MainWindow/Inventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_g12ya")
+expand_mode = 1
+
+[node name="Resource1" type="Control" parent="MainWindow/Inventory"]
+layout_mode = 1
+anchor_left = 0.113127
+anchor_top = 0.246523
+anchor_right = 0.290836
+anchor_bottom = 0.753477
+offset_left = 0.0299988
+offset_top = -0.0480003
+offset_right = 0.0999985
+offset_bottom = 0.0479965
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemIcon" type="Control" parent="MainWindow/Inventory/Resource1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -4.76229
+offset_bottom = -4.7636
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="MainWindow/Inventory/Resource1/ItemIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -0.999996
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_4w85f")
+expand_mode = 1
+
+[node name="ItemBackground" type="TextureRect" parent="MainWindow/Inventory/Resource1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_psfrr")
+expand_mode = 1
+
+[node name="ResourceLabel" type="Label" parent="MainWindow/Inventory/Resource1"]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 28.0
+offset_bottom = 46.0
+text = "64
+"
+label_settings = SubResource("LabelSettings_664rr")
+vertical_alignment = 2
+
+[node name="Resource2" type="Control" parent="MainWindow/Inventory"]
+layout_mode = 1
+anchor_left = 0.295511
+anchor_top = 0.246523
+anchor_right = 0.47322
+anchor_bottom = 0.753477
+offset_left = 0.0299816
+offset_top = -0.0480003
+offset_right = 0.0999832
+offset_bottom = 0.0479965
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemIcon" type="Control" parent="MainWindow/Inventory/Resource2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -4.76229
+offset_bottom = -4.7636
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="MainWindow/Inventory/Resource2/ItemIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -0.999996
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_e8p1a")
+expand_mode = 1
+
+[node name="ItemBackground" type="TextureRect" parent="MainWindow/Inventory/Resource2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_psfrr")
+expand_mode = 1
+
+[node name="ResourceLabel" type="Label" parent="MainWindow/Inventory/Resource2"]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 26.0
+offset_bottom = 46.0
+text = "64
+"
+label_settings = SubResource("LabelSettings_664rr")
+vertical_alignment = 2
+
+[node name="Resource3" type="Control" parent="MainWindow/Inventory"]
+layout_mode = 1
+anchor_left = 0.477992
+anchor_top = 0.246523
+anchor_right = 0.655701
+anchor_bottom = 0.753477
+offset_left = 0.0299988
+offset_top = -0.0480003
+offset_right = 0.0999985
+offset_bottom = 0.0479965
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemIcon" type="Control" parent="MainWindow/Inventory/Resource3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -4.76229
+offset_bottom = -4.7636
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="MainWindow/Inventory/Resource3/ItemIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -0.999996
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_6i554")
+expand_mode = 1
+
+[node name="ItemBackground" type="TextureRect" parent="MainWindow/Inventory/Resource3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_psfrr")
+expand_mode = 1
+
+[node name="ResourceLabel" type="Label" parent="MainWindow/Inventory/Resource3"]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 26.0
+offset_bottom = 46.0
+text = "64
+"
+label_settings = SubResource("LabelSettings_664rr")
+vertical_alignment = 2
+
+[node name="QuestItem" type="Control" parent="MainWindow/Inventory"]
+layout_mode = 1
+anchor_left = 0.675072
+anchor_top = 0.1255
+anchor_right = 0.924
+anchor_bottom = 0.834
+offset_left = 0.0299988
+offset_top = -0.0480003
+offset_right = -19.4139
+offset_bottom = -19.3004
+scale = Vector2(1.39591, 1.39591)
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemIcon" type="Control" parent="MainWindow/Inventory/QuestItem"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -4.76229
+offset_bottom = -4.7636
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemTexture" type="TextureRect" parent="MainWindow/Inventory/QuestItem/ItemIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_hgo53")
+expand_mode = 1
+
+[node name="ItemBackground" type="TextureRect" parent="MainWindow/Inventory/QuestItem"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_hvjsf")
+expand_mode = 1
+
+[node name="ActionBarControl" type="Control" parent="MainWindow"]
+layout_mode = 1
+anchor_left = 0.273684
+anchor_right = 0.724684
+anchor_bottom = 0.187227
+offset_right = -0.450012
+offset_bottom = 0.0479965
+scale = Vector2(0.971291, 0.971291)
+metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundBar" type="TextureRect" parent="MainWindow/ActionBarControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_28ge7")
+expand_mode = 1
+
+[node name="ActionBar" type="TextureProgressBar" parent="MainWindow/ActionBarControl"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0257835
+anchor_top = 0.215946
+anchor_right = 0.927784
+anchor_bottom = 0.619249
+offset_left = -2.79864
+offset_top = 1.11026
+offset_right = -11.8547
+offset_bottom = 2.80128
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+value = 100.0
+fill_mode = 1
+texture_progress = SubResource("AnimatedTexture_ex64t")
+
+[node name="ForegroundBar" type="TextureRect" parent="MainWindow/ActionBarControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_yvwwj")
+expand_mode = 1

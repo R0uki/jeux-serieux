@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://e1apu3gslbio"]
+
+[ext_resource type="Script" path="res://scene/Levels/Sign/Sign.gd" id="1_lmo8c"]
+[ext_resource type="PackedScene" uid="uid://mb0jatr06iuc" path="res://Interaction/InteractionArea.tscn" id="2_hvvmv"]
+
+[node name="Sign" type="Node2D"]
+script = ExtResource("1_lmo8c")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_hvvmv")]
+interaction_name = "lire"
+metadata/_edit_lock_ = true
+
+[editable path="InteractionArea"]

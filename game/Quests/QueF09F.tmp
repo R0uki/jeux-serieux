@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4yua56cru1eu"]
+
+[ext_resource type="Script" path="res://Quests/QuestsManager.gd" id="1_xwyop"]
+[ext_resource type="PackedScene" uid="uid://bl1w730rxnycj" path="res://Quests/Quest.tscn" id="2_vhmy0"]
+
+[node name="QuestsManager" type="Node2D"]
+script = ExtResource("1_xwyop")
+
+[node name="AvailableQuest" type="Node2D" parent="."]
+
+[node name="QF01" parent="AvailableQuest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF01"
+amount = 2
+
+[node name="QF02" parent="AvailableQuest" instance=ExtResource("2_vhmy0")]
+quest_id = "QF02"
+amount = 2
+
+[node name="InProgressQuest" type="Node2D" parent="."]
+
+[node name="CompletedQuest" type="Node2D" parent="."]

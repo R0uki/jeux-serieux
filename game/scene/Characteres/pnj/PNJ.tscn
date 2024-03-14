@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://br35c5623xaxj"]
+
+[ext_resource type="PackedScene" uid="uid://bu324o8b5reos" path="res://scene/Characteres/Charactere.tscn" id="1_mja0r"]
+[ext_resource type="Script" path="res://scene/Characteres/pnj/Pnj.gd" id="2_nbcc5"]
+[ext_resource type="Texture2D" uid="uid://bd7mpcr07v7ht" path="res://ImportFile/indication.png" id="3_2qexm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dj4yf"]
+line_spacing = 0.0
+font_size = 10
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PNJ" instance=ExtResource("1_mja0r")]
+script = ExtResource("2_nbcc5")
+quest_id = ""
+idle_dialogue = "Salut"
+type_pnj = "fermier"
+pnj_name = "Jean"
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.7, 0.7)
+
+[node name="QuestIndicator" type="TextureRect" parent="." index="3"]
+visible = false
+z_index = 5
+offset_left = -8.0
+offset_top = -58.0
+offset_right = 8.0
+offset_bottom = -43.0
+texture = ExtResource("3_2qexm")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="IdleLabel" type="Label" parent="." index="4"]
+unique_name_in_owner = true
+visible = false
+z_index = 5
+offset_left = -123.0
+offset_top = -41.0
+offset_right = 123.0
+offset_bottom = -25.0
+text = "il fait beau"
+label_settings = SubResource("LabelSettings_dj4yf")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="DetectionArea" type="Area2D" parent="." index="5"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" index="0"]
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

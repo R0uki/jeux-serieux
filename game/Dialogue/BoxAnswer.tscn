@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd3n8l45f7iy1"]
+
+[ext_resource type="PackedScene" uid="uid://i3vv0w25yto2" path="res://Dialogue/Answer.tscn" id="1_45joy"]
+[ext_resource type="Script" path="res://Dialogue/BoxAnswer.gd" id="1_xumix"]
+
+[node name="BoxAnswer" type="VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+anchors_preset = -1
+anchor_right = 0.589
+anchor_bottom = 0.165
+offset_right = -59.55
+offset_bottom = 0.199997
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xumix")
+
+[node name="Answer1" parent="." instance=ExtResource("1_45joy")]
+visible = false
+layout_mode = 2
+
+[node name="Answer2" parent="." instance=ExtResource("1_45joy")]
+visible = false
+layout_mode = 2
+
+[node name="Answer3" parent="." instance=ExtResource("1_45joy")]
+visible = false
+layout_mode = 2
+
+[connection signal="pressed" from="Answer1" to="." method="_on_answer_1_pressed"]
+[connection signal="pressed" from="Answer2" to="." method="_on_answer_2_pressed"]
+[connection signal="pressed" from="Answer3" to="." method="_on_answer_3_pressed"]
+
+[editable path="Answer1"]
+[editable path="Answer2"]
+[editable path="Answer3"]

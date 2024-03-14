@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://4lliwvupljt3"]
+
+[ext_resource type="Script" path="res://Interaction/InteractionManager.gd" id="1_eosvc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_faamf"]
+font_size = 15
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_eosvc")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+z_index = 10
+offset_left = -135.0
+offset_top = -12.0
+offset_right = 136.0
+offset_bottom = 11.0
+text = "interargir"
+label_settings = SubResource("LabelSettings_faamf")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true

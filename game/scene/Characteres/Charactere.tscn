@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu324o8b5reos"]
+
+[ext_resource type="Script" path="res://scene/Characteres/Charactere.gd" id="1_b4m5l"]
+[ext_resource type="Script" path="res://StateMachine/StateMachine.gd" id="2_o7opl"]
+[ext_resource type="Script" path="res://StateMachine/State.gd" id="3_dxbsp"]
+
+[node name="Charactere" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_b4m5l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+animation = &""
+offset = Vector2(0, -20)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_o7opl")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_dxbsp")
+
+[connection signal="facing_direction_change" from="." to="." method="_on_facing_direction_change"]
+[connection signal="moving_direction_change" from="." to="." method="_on_moving_direction_change"]
+[connection signal="state_change" from="StateMachine" to="." method="_on_state_change"]

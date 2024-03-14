@@ -1,0 +1,47 @@
+{
+	"guard_paysant" : {
+		"1" : "Halte ! Sale manant, tu ne peux pas entrer dans la ville à moins que tu n'aies acheté un droit de passage. Il y a un vendeur à l'est du marché.",
+		"2" : "Stop, vous ne pouvez pas aller plus loin"
+	}, 
+	
+	"guard_citadin" : {
+		"1" : "Halte ! Vous ne pouvez pas continuer, vous n'avez pas assez d'argent.",
+		"2" : "Stop, vous ne pouvez pas aller plus loin"
+	}, 
+	
+	"guard_clos" : {
+		"1" : "Je suis vraiment navré, mais vou ne pourrez pas passez.  
+		Malheureseument un arbre est tombé sur le chemin du Clus Luc.
+		Si vous voulais voir Leonard De Vinci il faudrat attendre.",
+	},
+	
+	"fermier" : {
+		"1" : "Certains paysans parlent de former une coopérative pour mieux négocier avec les marchands et les nobles.",
+		"2" : "Notre travail est apprécié à la cour, mais il est difficile de rivaliser avec les artisans nobles. Leurs privilèges sont nombreux.",
+		"3" : "Les impôts ne cessent d'augmenter, et il devient difficile de mettre assez de nourriture sur la table pour mes enfants."
+	},
+	
+	"manant" : {
+		"1" : "Les marchands discutent de former une guilde pour défendre nos intérêts et négocier avec le roi.",
+		"2" : "Les marchands itinérants apportent des produits exotiques, mais les droits de douane rendent les importations coûteuses."
+	},
+	
+	"guard" : {
+		"1" : "Oh, j'ai entendu récemment que les personnes fortunées qui vont au château ressortent souvent nobles."
+	},
+	
+	"noble" : {
+		"1" : "La cour est le théâtre de nombreuses intrigues. Certains nobles tentent de gagner en faveur royale, d'autres cherchent à évincer leurs rivaux.",
+		"2" : "Le roi envisage de créer de nouvelles charges et titres de noblesse. Cela suscite des espoirs et des craintes parmi les courtisans.",
+		"3" : "La cour parle des festivités royales à venir. Les préparatifs sont intenses, et chaque classe souhaite être représentée de manière appropriée."
+	},
+	
+	"marchant" : {
+		 "1" : "Pour avoir le droit de vente en ville, il faut un droit de passage. Bien heureusement, j'ai des contacts.
+Pour la modique somme de 15 pièces de cuivre, tu pourrais vendre des denrées en ville..."
+	},
+	
+	"guilde" : {
+		"1" : "Vous devez rejoindre la guilde des gentils d'Amboise. Bien heureusement, j'en fais partie, et pourrais même vous parrainer, contre compensation de seulement 150 pièces bien évidemment."
+	}
+}

@@ -1,0 +1,447 @@
+[gd_scene load_steps=13 format=3 uid="uid://rty53g6e17wa"]
+
+[ext_resource type="PackedScene" uid="uid://ctf83grvrkwi8" path="res://scene/Levels/Amboise.tscn" id="1_rcf1s"]
+[ext_resource type="PackedScene" uid="uid://bvf1e7r085x6g" path="res://scene/Menu/PauseMenu.tscn" id="1_sutk4"]
+[ext_resource type="PackedScene" uid="uid://bn5kyck1dtoq7" path="res://scene/Characteres/Player/Player.tscn" id="2_2lmla"]
+[ext_resource type="PackedScene" uid="uid://4uc56c6kxxxw" path="res://scene/UserUi/MainUi.tscn" id="2_imqql"]
+[ext_resource type="AudioStream" uid="uid://xrjh4gd7gkir" path="res://ImportFile/Sounds/Music/taberna.wav" id="5_bq65h"]
+[ext_resource type="Script" path="res://Sounds/LocalSound.gd" id="6_2ajnr"]
+[ext_resource type="AudioStream" uid="uid://ddeuybc2yoipf" path="res://ImportFile/Sounds/Ambient/forest.wav" id="6_gm67d"]
+[ext_resource type="AudioStream" uid="uid://0eyiuogw6p5m" path="res://ImportFile/Sounds/Ambient/marketplace.wav" id="8_kv45b"]
+[ext_resource type="AudioStream" uid="uid://ba0irwo1khnp0" path="res://ImportFile/Sounds/Ambient/river.wav" id="9_tonnd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_002rr"]
+size = Vector2(500, 200)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w1gwm"]
+radius = 1000.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0buje"]
+size = Vector2(520, 400)
+
+[node name="World" type="Node2D"]
+position = Vector2(-283, -573)
+
+[node name="UI" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="MainUi" parent="UI" instance=ExtResource("2_imqql")]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("1_sutk4")]
+visible = false
+
+[node name="Niveaux" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Amboise" parent="Niveaux" instance=ExtResource("1_rcf1s")]
+position = Vector2(253.688, 603.12)
+
+[node name="Player" parent="Niveaux" instance=ExtResource("2_2lmla")]
+unique_name_in_owner = true
+position = Vector2(-796, 1499)
+scale = Vector2(0.7, 0.7)
+
+[node name="AnimatedSprite2D" parent="Niveaux/Player" index="0"]
+animation = &"MoveDown"
+
+[node name="Sounds" type="Node2D" parent="Niveaux"]
+
+[node name="MainPlayer" type="AudioStreamPlayer" parent="Niveaux/Sounds"]
+stream = ExtResource("5_bq65h")
+volume_db = -35.0
+autoplay = true
+
+[node name="AmbientSounds" type="Node2D" parent="Niveaux/Sounds"]
+
+[node name="ForestSounds" type="Node2D" parent="Niveaux/Sounds/AmbientSounds"]
+
+[node name="ForestZone" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(-648, 1731)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone2" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(-147, 1731)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone2"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone2/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone3" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(355, 1731)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone3"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone3/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone4" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(885, 1626)
+rotation = -0.325629
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone4"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone4/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone5" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(1367, 1479)
+rotation = -0.325629
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone5"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone5/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone6" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(1519, 1081)
+rotation = -1.57547
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone6"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone6/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone7" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(1518, 576)
+rotation = -1.57547
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone7"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone7/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone8" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(1516, 75)
+rotation = -1.57547
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone8"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone8/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone9" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(1469, -430)
+rotation = -1.57547
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone9"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone9/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone10" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(1187, -637)
+rotation = -2.35957
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone10"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone10/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="ForestZone11" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds"]
+position = Vector2(-632, -1133)
+rotation = 3.13151
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone11"]
+position = Vector2(0, 103)
+stream = ExtResource("6_gm67d")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone11/SoundZone"]
+shape = SubResource("RectangleShape2D_002rr")
+
+[node name="MarketSounds" type="Node2D" parent="Niveaux/Sounds/AmbientSounds"]
+
+[node name="MarketZone" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/MarketSounds"]
+position = Vector2(350, 198)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/MarketSounds/MarketZone"]
+stream = ExtResource("8_kv45b")
+volume_db = -15.0
+max_distance = 1000.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/MarketSounds/MarketZone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/MarketSounds/MarketZone/SoundZone"]
+shape = SubResource("CircleShape2D_w1gwm")
+
+[node name="RiverSounds" type="Node2D" parent="Niveaux/Sounds/AmbientSounds"]
+
+[node name="RiverZone" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds"]
+position = Vector2(-803, 1501)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone"]
+position = Vector2(-244, 0)
+stream = ExtResource("9_tonnd")
+volume_db = -20.0
+max_distance = 400.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone/SoundZone"]
+shape = SubResource("RectangleShape2D_0buje")
+
+[node name="RiverZone2" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds"]
+position = Vector2(-803, 1095)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone2"]
+position = Vector2(-244, 0)
+stream = ExtResource("9_tonnd")
+volume_db = -20.0
+max_distance = 400.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone2/SoundZone"]
+shape = SubResource("RectangleShape2D_0buje")
+
+[node name="RiverZone3" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds"]
+position = Vector2(-803, 690)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone3"]
+position = Vector2(-244, 0)
+stream = ExtResource("9_tonnd")
+volume_db = -20.0
+max_distance = 400.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone3/SoundZone"]
+shape = SubResource("RectangleShape2D_0buje")
+
+[node name="RiverZone4" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds"]
+position = Vector2(-803, 288)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone4"]
+position = Vector2(-244, 0)
+stream = ExtResource("9_tonnd")
+volume_db = -20.0
+max_distance = 400.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone4/SoundZone"]
+shape = SubResource("RectangleShape2D_0buje")
+
+[node name="RiverZone5" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds"]
+position = Vector2(-803, -115)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone5"]
+position = Vector2(-244, 0)
+stream = ExtResource("9_tonnd")
+volume_db = -20.0
+max_distance = 400.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone5/SoundZone"]
+shape = SubResource("RectangleShape2D_0buje")
+
+[node name="RiverZone6" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds"]
+position = Vector2(-803, -518)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone6"]
+position = Vector2(-244, 0)
+stream = ExtResource("9_tonnd")
+volume_db = -20.0
+max_distance = 400.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone6/SoundZone"]
+shape = SubResource("RectangleShape2D_0buje")
+
+[node name="RiverZone7" type="Node2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds"]
+position = Vector2(-803, -919)
+script = ExtResource("6_2ajnr")
+
+[node name="LocalPlayer" type="AudioStreamPlayer2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone7"]
+position = Vector2(-244, 0)
+stream = ExtResource("9_tonnd")
+volume_db = -20.0
+max_distance = 400.0
+attenuation = 2.0
+
+[node name="SoundZone" type="Area2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone7/SoundZone"]
+position = Vector2(-110, 0)
+shape = SubResource("RectangleShape2D_0buje")
+
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone2/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone2" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone2/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone2" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone3/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone3" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone3/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone3" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone4/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone4" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone4/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone4" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone5/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone5" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone5/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone5" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone6/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone6" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone6/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone6" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone7/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone7" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone7/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone7" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone8/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone8" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone8/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone8" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone9/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone9" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone9/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone9" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone10/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone10" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone10/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone10" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone11/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone11" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone11/SoundZone" to="Niveaux/Sounds/AmbientSounds/ForestSounds/ForestZone11" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/MarketSounds/MarketZone/SoundZone" to="Niveaux/Sounds/AmbientSounds/MarketSounds/MarketZone" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/MarketSounds/MarketZone/SoundZone" to="Niveaux/Sounds/AmbientSounds/MarketSounds/MarketZone" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone2/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone2" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone2/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone2" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone3/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone3" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone3/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone3" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone4/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone4" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone4/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone4" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone5/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone5" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone5/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone5" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone6/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone6" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone6/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone6" method="_on_sound_zone_body_exited"]
+[connection signal="body_entered" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone7/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone7" method="_on_sound_zone_body_entered"]
+[connection signal="body_exited" from="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone7/SoundZone" to="Niveaux/Sounds/AmbientSounds/RiverSounds/RiverZone7" method="_on_sound_zone_body_exited"]
+
+[editable path="UI/MainUi"]
+[editable path="UI/PauseMenu"]
+[editable path="Niveaux/Amboise"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign1"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign1/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign2"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign2/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign3"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign3/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign4"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign4/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign5"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign5/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign6"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign6/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign7"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign7/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign8"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign8/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign9"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign9/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign10"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign10/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign11"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign11/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign12"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign12/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign13"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign13/InteractionArea"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign14"]
+[editable path="Niveaux/Amboise/RoadSign/RoadSign14/InteractionArea"]
+[editable path="Niveaux/Amboise/Sign/Sign1"]
+[editable path="Niveaux/Amboise/Sign/Sign1/InteractionArea"]
+[editable path="Niveaux/Amboise/Sign/Sign2"]
+[editable path="Niveaux/Amboise/Sign/Sign2/InteractionArea"]
+[editable path="Niveaux/Amboise/Sign/Sign3"]
+[editable path="Niveaux/Amboise/Sign/Sign3/InteractionArea"]
+[editable path="Niveaux/Amboise/Sign/Sign4"]
+[editable path="Niveaux/Amboise/Sign/Sign4/InteractionArea"]
+[editable path="Niveaux/Amboise/Sign/Sign5"]
+[editable path="Niveaux/Amboise/Sign/Sign5/InteractionArea"]
+[editable path="Niveaux/Amboise/PNJ/PNJTeste"]
+[editable path="Niveaux/Amboise/PNJ/PNJTeste/InteractionArea"]
+[editable path="Niveaux/Amboise/PNJ/Guard/Gard1"]
+[editable path="Niveaux/Amboise/PNJ/Guard/Gard1/InteractionArea"]
+[editable path="Niveaux/Player"]

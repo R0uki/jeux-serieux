@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj038a0fgatpa"]
+
+[ext_resource type="Script" path="res://scene/UserUi/popup.gd" id="1_giat5"]
+[ext_resource type="Texture2D" uid="uid://goho3edypt8b" path="res://ImportFile/parchment1.png" id="1_wkgvo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8frrt"]
+font_size = 32
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Popup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_giat5")
+
+[node name="main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 222.0
+offset_top = 111.0
+offset_right = -228.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wkgvo")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Vous êtes con,
+Cordialement,
+Le pape François"
+label_settings = SubResource("LabelSettings_8frrt")
+horizontal_alignment = 1
+vertical_alignment = 1

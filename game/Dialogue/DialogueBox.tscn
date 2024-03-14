@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6hhaignog84f"]
+
+[ext_resource type="Texture2D" uid="uid://goho3edypt8b" path="res://ImportFile/parchment1.png" id="1_bvria"]
+[ext_resource type="Script" path="res://Dialogue/DialogueBox.gd" id="2_g8wuc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_npe3j"]
+line_spacing = -3.0
+font_size = 21
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rto7d"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DailogueBox" type="TextureRect"]
+anchors_preset = -1
+anchor_top = 0.023
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 126.0
+offset_top = 295.04
+offset_right = -129.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bvria")
+script = ExtResource("2_g8wuc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 22.0
+offset_right = 643.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Hello World"
+label_settings = SubResource("LabelSettings_npe3j")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LabelKeys" type="Label" parent="."]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 157.0
+offset_right = 648.0
+offset_bottom = 202.0
+text = "espace"
+label_settings = SubResource("LabelSettings_rto7d")
+horizontal_alignment = 2

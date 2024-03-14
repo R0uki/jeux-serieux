@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://dc7c7mj7mxjm1"]
+
+[ext_resource type="Texture2D" uid="uid://c8kbueum6di5h" path="res://impot file/testeInteraction1.png" id="1_luo5d"]
+[ext_resource type="Script" path="res://scene/teste-interaction.gd" id="1_taogm"]
+[ext_resource type="PackedScene" uid="uid://snxlhtq7ssrn" path="res://Interaction/interaction_area.tscn" id="3_cbm8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqtrq"]
+atlas = ExtResource("1_luo5d")
+region = Rect2(0, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07lt6"]
+atlas = ExtResource("1_luo5d")
+region = Rect2(34, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46ddv"]
+atlas = ExtResource("1_luo5d")
+region = Rect2(68, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ese77"]
+atlas = ExtResource("1_luo5d")
+region = Rect2(102, 0, 34, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lmaor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqtrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07lt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46ddv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ese77")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8qmd"]
+size = Vector2(28, 27)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_taogm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lmaor")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+visibility_layer = 0
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_b8qmd")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Interaction_area" parent="." instance=ExtResource("3_cbm8w")]
+scale = Vector2(2, 2)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

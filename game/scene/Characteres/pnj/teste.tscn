@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cesdvmqitwjjt"]
+
+[ext_resource type="Script" path="res://scene/Characteres/pnj/Pnj.gd" id="1_l5qxa"]
+
+[node name="teste" type="Node2D"]
+script = ExtResource("1_l5qxa")

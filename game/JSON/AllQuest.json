@@ -1,0 +1,771 @@
+{
+	"QS01" : {
+		"quest_name" : "teste",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Eh l'ami ! Tu pourrais ramener ce tableau à mon frère dans la haute campagne à coté du clos lucé ? Dit lui que tu vient de la part de Claudo",
+				},
+				"answer" : {
+					"1" : "Non désolé.",
+					"2" : "Oui avec plaisir"
+				}
+			}
+		}
+	},
+	
+	"QS02" : {
+		"quest_name" : "teste",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "donner l'item au joueur du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "C'est Claudo qui vous envoie ? Oh merci ! Tenez, voila 5 pièces !",
+				},
+				"answer" : {
+					"1" : "Non désolé.",
+					"2" : "Oui avec plaisir"
+				}
+			}
+		}
+	},
+	
+	"QF01" : {
+		"quest_name" : "tuto_exchange_piece",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "parler au pnj",
+			"2" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Ho non, mes récoltes ne sont pas bonne cette année.
+					Oh mince !, je ne t'avait pas vue.",
+				},
+				"answer" : {
+				}
+			},
+			"2" : {
+				"text" : {
+					"1" :"Comme tu as du l'entrendre, je n'ai pas eu de bonne récolte cette année, est ce que tu serait sympa pour me donner 3 de blés contre 2 piece ?",
+				},
+				"answer" : {
+					"1" : "Non désolé.",
+					"2" : "Oui avec plaisir"
+				}
+			}
+		}
+	},
+	
+	"QF02" : {
+		"quest_name" : "tuto_exchange_ressource",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"1" : "parler au pnj",
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Je suis en manque de blé pour faire mon pain, est ce qeu tu voudrais bien m'échanger 1 de blé contre 2 orge ?"
+				},
+				"answer" : {
+					"1" : "Non ca ira, je n'ai pas besoin d'orge",
+					"2" : "Oui je veut bien, en plus j'avais besoin d'orge.",
+				}
+			}
+		}
+	},
+	
+	"QF03" : {
+		"quest_name" : "tuto_arnaque",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Eh jeune margoulin ! Est tu intéressé dans les NFT (Non-Fongible-Triticum) ? Je te donne 1 pièce si tu me fournis 10 blé pour en faire."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF04" : {
+		"quest_name" : "enought_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Jeune manant, ma famille frole la famine. Contre 5 ble, je te propose 2 pièce de cuivre ! Qu'en pense tu ?"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF05" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Salut Jean ! J'aimerais faire du pain mais il me manque du blé. Je te propose 4 piece contre 6 blé !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF06" : {
+		"quest_name" : "need_oublon_biere",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : " Eh Louis ! J'ai prévu une petite fête à la beuverie du quoi, mais ils nous faut de la bière. Je manque aussi de houblon, donc contre 3 pièce,je t'offre 2 houblon !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF07" : {
+		"quest_name" : "sell_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Le prêtre m'envoie pour faire le pain de messe, mais je n'ai de blé ! Il me manque 6 blés, que je suis pret à acheter pour 3 pièces de cuivre..."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF08" : {
+		"quest_name" : "sell_oublon",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "*hic* Eh l'autre ! Ramène *hic* moi 3 pièces de cuivres *hic* et t'aura 5 houblon "
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF09" : {
+		"quest_name" : "exchange_orge",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "*snif* Je n'ai plus de houblon mais trop d'orge ! Comment je vais vivre sans bière moi ? *snif* m'on orges, mes 2 orges pour un houblon !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF10" : {
+		"quest_name" : "very_need_oublon",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "J'ai pas suffisament de bière il me manque du houblon, 2 houblons ! Je t'offre 5 pieces si tu me donne 2 houblon !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF11" : {
+		"quest_name" : "seel_blehors",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Monseigneur Guy Lesadique requiert suffisament de blé pour la journée ! Pitié, je t'offre 3 pièces contre tes 4 blés !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF12" : {
+		"quest_name" : "exchange_oublon",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Il me manque juste 1 houblon pour finir ma bière ! En échange, je te propose 4 Blés !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF13" : {
+		"quest_name" : "sell_orge",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Il me faut plein d'orges pour faire ma bière ! Je t'offre 4 piece contre 3 orges."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF14" : {
+		"quest_name" : "buy_orge",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Un vil marchand m'a volé tout mon argent contre de l'orge ! Accepte ces 5 orges en échange de 2 pièces !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF15" : {
+		"quest_name" : "buy_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Le soleil est bien bas et j'ai pas mangé de la journée ! J'aimerais me faire du pain mais je n'ai rien ! Si t'as 5 blés je t'en offre 1 pièces !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF16" : {
+		"quest_name" : "exchange_oublons",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : " De la bière ! De la bière ! J'ai que du pain, et du blé, et ma SOIF ! 1 houblon contre 5 blés !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QF17" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "J'ai mangé tout mon blé et je ne peut plus faire de pain ! Contre 2 pièces je t'achète 3 blés"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	
+	"QM01" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "J'organise un banquet, mais je n'ai plus de viande, et un banquet sans viande c'est... bah... Oh ! Contre je t'offre 1 pièces l'unité, pour 20 viandes !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM02" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "parler au pnj",
+			"2" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Est-ce que tu es déjà allé voir la guilde des gentils d'Amboise ? Vous devriez y aller, elle se trouve au nord de la place."
+				},
+				"answer" : {
+				}
+			},
+			
+			"2" : {
+				"text" : {
+					"1" : "Et d'ailleur, il me faudrait 7 corde, je te paierai avec 15 pièces."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	"QM03" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Ma femme veux refaire ça garde robe, et ça va me couté un bras, ou même deux ! Si vous avez 8 pelotes de lin, je vous en offre 20 pièces"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	"QM04" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Il me faudrait des cordes ! C'est bientot la fête de la pendaison !Je te paierai avec 2 pièces par cordes pour 20 cordes."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	"QM05" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Je te donnerai 15 cordes si tu peux me fournir 10 gigots de viande"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	"QM06" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Fourni moi 5 pelote de lin et en échange je te donnerai 20 pièces."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM07" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Eh l'ami ! J'ai prévu une petite fête avec des amis dans ma cave, mais il me faut des cordes. Pour 15 cordes je t'offre 20 pièces."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM08" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Pourriez-vous m'aider à remonter la pente en m'achetant mes 8 dernières pelotes de lins ? Je ne requiert que 20 pièces d'argent."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM09" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Pouvez-vous aider l'illustre Cire Annau dans sa quête pour son manteau ? Je vous rendrai grâce, et 50 pièces pour d'humbles pelotes de lin."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM10" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Vous, oui vous. Seriez-vous prêt à m'aider ? En attendant, fournissez-moi 10 cordes pour celle-ci et je vous offre ces 5 magnifiques vêtements. "
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM11" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Qui d'autre irait acheter des cordes ? Oh vous, peut-être ? Allez, je vous fait un prix d'ami, 10 cordes contre 15 bonnes viandes."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM12" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "10 belles pièces de viande contre 6 pièces d'argent !"
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QM13" : {
+		"quest_name" : "need_ble",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Vous voyez cette bourse de 15 pièces d'argent ? remue la bourse Elle est à vous, contre 10 beaux gigots..."
+				},
+				"answer" : {
+					"1" : "Non",
+					"2" : "Oui",
+				}
+			}
+		}
+	},
+	
+	"QN01" : {
+		"quest_name" : "teste",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "J'aimerais faire une donation à notre dame du pendu, mais il me faut du verre pour les vitraux. Contre 9 verres, je suis pret à vous en donner 100 pièces d'or",
+				},
+				"answer" : {
+					"1" : "Non désolé.",
+					"2" : "Oui avec plaisir"
+				}
+			}
+		}
+	},
+	
+	"QN02" : {
+		"quest_name" : "teste",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Ma belle est sur le point de m'assassiner ! Elle ne cesse de demander des robes en soie ! Aidez moi je vous en prie, fournissez moi 40 soies et je vous paierait dument 150 pièces d'or !",
+				},
+				"answer" : {
+					"1" : "Non désolé.",
+					"2" : "Oui avec plaisir"
+				}
+			}
+		}
+	},
+	
+	"QN03" : {
+		"quest_name" : "teste",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "Mon amis l'amiral de la flotte fluviale attend mon cadeau depuis ce matin. Pouvez vous lui fournir au port près du chateau ?",
+				},
+				"answer" : {
+					"1" : "Non désolé.",
+					"2" : "Oui avec plaisir"
+				}
+			}
+		}
+	},
+	
+	"QN04" : {
+		"quest_name" : "teste",
+		"current_stage" : 0,
+		"time" : -9,
+		"stage_quest_description" : {
+			"0" : "trouve le pnj",
+			"1" : "accepter la demande du pnj"
+		},
+		"dialogue" : {
+			"1" : {
+				"text" : {
+					"1" : "C'est le duc d'Oncleud qui vous envoie ? Oh ! Quel somptueux Tableau représentant sa propre personne ! Tenez l'ami, voici 400 pièces",
+				},
+				"answer" : {
+					"1" : "Non désolé.",
+					"2" : "Oui avec plaisir"
+				}
+			}
+		}
+	},
+}
