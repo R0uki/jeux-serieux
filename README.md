@@ -1,5 +1,5 @@
 # Amboize
-### _T3_
+### _Jeux sérieux, sur le thème de Amboise à la renaissance_
 
 Plongez au cœur de la Renaissance à Amboise, siège du roi de France, dans ce jeu éducatif dans lequel vous pourrez explorer une société où les castes paysannes, marchandes et royales ont chacune leur place.
 ***Amboize*** offre une plongée immersive dans l'histoire, mêlant éducation et divertissement pour explorer les complexités des relations socio-économiques à une époque importante de l'histoire française.
