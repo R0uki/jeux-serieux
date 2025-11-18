@@ -13,7 +13,7 @@ Plongez au cœur de la Renaissance à Amboise, siège du roi de France, dans ce 
 
 ## Téléchargement
 
-Nous n'avons pas eu le temps de faire un exécutable. Il suffira de télécharger le fichier game est lancer le jeux directement depuis 
+Il n'y à malheureusement pas d'exécutable. Il suffit de télécharger le fichier game est lancer le jeux directement depuis 
 l'environement Godot.
 
 ## Documentation
